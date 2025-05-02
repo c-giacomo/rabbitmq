@@ -1,1 +1,1 @@
-# rabbitmq
+# simple RabbitMQ examples of Exchanges Types with a little .docx guide to BrokerInstallation and usage
