@@ -71,7 +71,8 @@
     </dependencies>
 
     <modules>
-        <module>rabbitmq-default</module>
+        <module>rabbitmq-default-exchange</module>
+        <module>rabbitmq-direct-exchange</module>
     </modules>
 
 </project>
