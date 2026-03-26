@@ -6,3 +6,7 @@ spring:
         port: 5672
         username: guest
         password: guest
+    amqp:
+        deserialization:
+            trust:
+                packages: com.rabbitmq.model

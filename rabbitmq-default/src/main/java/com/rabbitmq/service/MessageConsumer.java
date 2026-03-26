@@ -11,11 +11,17 @@ import org.springframework.stereotype.Service;
 public class MessageConsumer {
 
     @RabbitListener(queues = RabbitMQConfiguration.TEST_QUEUE)
-    public void riceviMessaggio(Object messaggio) {
+    public void riceviMessaggio(String messaggio) {
         if (messaggio instanceof String mess) {
             log.info("Messaggio ricevuto: {}", mess);
-        } else if (messaggio instanceof User user) {
+        }
+    }
+
+    @RabbitListener(queues = RabbitMQConfiguration.TEST_QUEUE)
+    public void riceviMessaggio(User user) {
+        if (user != null) {
             log.info("Utente nome: {}, cognome: {}, età {}", user.getName(), user.getSurname(), user.getAge());
         }
     }
+
 }
