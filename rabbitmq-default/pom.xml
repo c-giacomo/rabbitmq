@@ -8,7 +8,7 @@
         <artifactId>rabbitmq</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>rabbit-default</artifactId>
+    <artifactId>rabbitmq-default</artifactId>
     <packaging>jar</packaging>
 
     <build>
