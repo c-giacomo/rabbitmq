@@ -7,4 +7,4 @@ spring:
         username: guest
         password: guest
     profiles:
-        active: default
+        active: direct

@@ -18,8 +18,14 @@ public class MessageDirectProducer implements IMessageProducer {
     public void inviaMessaggio() {
         rabbitTemplate.convertAndSend(
                 RabbitDirectExchangeConfiguration.DIRECT_EXCHANGE,      // nome exchange
-                RabbitDirectExchangeConfiguration.ROUTING,              // routing
-                "ficale"                                                // messaggio
+                RabbitDirectExchangeConfiguration.ROUTINGA,             // routing
+                "ficaleA"                                               // messaggio
+        );
+
+        rabbitTemplate.convertAndSend(
+                RabbitDirectExchangeConfiguration.DIRECT_EXCHANGE,      // nome exchange
+                RabbitDirectExchangeConfiguration.ROUTINGB,             // routing
+                "ficaleB"                                               // messaggio
         );
     }
 }

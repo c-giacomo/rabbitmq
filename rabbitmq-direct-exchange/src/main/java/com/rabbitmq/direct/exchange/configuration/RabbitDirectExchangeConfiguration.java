@@ -20,7 +20,8 @@ public class RabbitDirectExchangeConfiguration {
     public static final String DIRECT_EXCHANGE = "direct.exchange"; // NOME EXCHANGE
     public static final String QUEUE_A = "queue_a";                 // NOME CODA A
     public static final String QUEUE_B = "queue_b";                 // NOME CODA B
-    public static final String ROUTING = "routing";                 // NOME ROUTING
+    public static final String ROUTINGA = "routinga";                // NOME ROUTING A
+    public static final String ROUTINGB = "routingb";                // NOME ROUTING A
 
     @Bean
     RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory){
@@ -50,7 +51,7 @@ public class RabbitDirectExchangeConfiguration {
         return BindingBuilder
                 .bind(queueA)
                 .to(exchange)
-                .with(ROUTING);
+                .with(ROUTINGA);
     }
 
     @Bean
@@ -58,6 +59,6 @@ public class RabbitDirectExchangeConfiguration {
         return BindingBuilder
                 .bind(queueB)
                 .to(exchange)
-                .with(ROUTING);
+                .with(ROUTINGB);
     }
 }
