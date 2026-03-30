@@ -73,6 +73,8 @@
     <modules>
         <module>rabbitmq-default-exchange</module>
         <module>rabbitmq-direct-exchange</module>
+        <module>rabbitmq-topic-exchange</module>
+        <module>rabbitmq-fanout-exchange</module>
     </modules>
 
 </project>
